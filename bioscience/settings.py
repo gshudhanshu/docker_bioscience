@@ -30,6 +30,9 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     ".coursera-apps.org",
     ".coursera.org",
+    "bioscience.sgcreative.pro"
+    "test.sgcreative.pro"
+    "sgcreative.pro"
 ]
 
 
