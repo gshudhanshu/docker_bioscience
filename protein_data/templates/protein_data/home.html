@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello, world!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body style="padding: 20px">
+    <h2>REST API Endpoint</h2>
+    <ul>
+      <li>
+        <strong>Home:</strong>
+        <p>The home page of the application.</p>
+
+        <p />
+        1) <a href="/">http://127.0.0.1:8000</a> OR 2)
+        <a href="/">http://127.0.0.1:8000/api</a>
+      </li>
+      <li>
+        <strong>Create Protein:</strong>
+        <p>Add a new protein to the database.</p>
+
+        <p />
+        Example: POST
+        <a href="/api/protein/">http://127.0.0.1:8000/api/protein/</a>
+        <div>
+          <p>Example data</p>
+          <code>
+            { "protein_id": "TESTP", "sequence": "dfvdffd", "taxonomy": {
+            "taxa_id": "testtax32", "clade": "D", "genus": "fgdgfbgd",
+            "species": "dfdfgvbg" }, "length": 23, "domains": [{ "pfam_id": {
+            "domain_id": "TESTP32", "domain_description": "PeptidaseC13family"
+            }, "description": "Peptidase C13 legumain", "start": 40, "stop": 94
+            }] }
+          </code>
+        </div>
+      </li>
+      <li>
+        <strong>Protein Detail:</strong>
+        <p>Get details of a protein by protein ID.</p>
+
+        <p />
+        Example:
+        <a href="/api/protein/A0A016S8J7"
+          >GET http://127.0.0.1:8000/api/protein/A0A016S8J7</a
+        >
+      </li>
+      <li>
+        <strong>Pfam Detail:</strong>
+        <p>Get details of a Pfam domain by domain ID.</p>
+
+        <p />
+        Example: GET
+        <a href="/api/pfam/PF00360">http://127.0.0.1:8000/api/pfam/PF00360</a>
+      </li>
+      <li>
+        <strong>Proteins by Taxa:</strong>
+        <p>Get proteins belonging to a specific taxa ID.</p>
+
+        <p />
+        Example: GET
+        <a href="/api/proteins/55661"
+          >http://127.0.0.1:8000/api/proteins/55661</a
+        >
+      </li>
+      <li>
+        <strong>Pfams by Taxa:</strong>
+        <p>Get Pfam domains belonging to a specific taxa ID.</p>
+
+        <p />
+        Example: GET
+        <a href="/api/pfams/55661">http://127.0.0.1:8000/api/pfams/55661</a>
+      </li>
+      <li>
+        <strong>Coverage by Protein:</strong>
+        <p>Get coverage information for a protein by protein ID.</p>
+
+        <p />
+        Example: GET
+        <a href="/api/coverage/A0A016S8J7"
+          >http://127.0.0.1:8000/api/coverage/A0A016S8J7</a
+        >
+      </li>
+    </ul>
+
+    <h2>Getting Started with the Django Project</h2>
+    <ol>
+      <li>
+        <p>Change into the project directory:</p>
+        <code>cd bioscience</code>
+      </li>
+      <li>
+        <p>Create a virtual environment:</p>
+        <code>python -m venv env</code>
+      </li>
+      <li>
+        <p>Activate the virtual environment:</p>
+        <code>source env/bin/activate</code> (for Unix/Mac)
+        <code>./env/Scripts/activate</code> (for Windows)
+      </li>
+      <li>
+        <p>Install the project dependencies:</p>
+        <code>pip install -r requirements.txt</code>
+      </li>
+      <li>
+        <p>Run database migrations:</p>
+        <code>python manage.py migrate</code>
+      </li>
+      <li>
+        <p>Populate database using CSV files:</p>
+        <code>python manage.py populate_db</code>
+      </li>
+      <li>
+        <p>Start the development server:</p>
+        <code>python manage.py runserver</code>
+      </li>
+    </ol>
+  </body>
+</html>
