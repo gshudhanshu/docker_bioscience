@@ -26,7 +26,8 @@ SECRET_KEY = "django-insecure-@ycjtd=ko3=*a)2n(kb8hae9tprq!$)+n0+k^u%!^p5#1!e#0q
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ".sgcreative.pro"
+    ".sgcreative.pro",
+    "0.0.0.0",
     "localhost",
     "127.0.0.1",
     ".coursera-apps.org",
